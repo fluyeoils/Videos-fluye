@@ -1,0 +1,4 @@
+.DS_Store
+.claude/skills/editor-video-ia/.venv/
+node_modules/
+edicion-*/

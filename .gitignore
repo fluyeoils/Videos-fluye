@@ -2,3 +2,6 @@
 .claude/skills/editor-video-ia/.venv/
 node_modules/
 edicion-*/
+__pycache__/
+# videos crudos, tomas de apoyo y renders (pesados; no van en git)
+material/

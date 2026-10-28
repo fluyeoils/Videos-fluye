@@ -88,10 +88,10 @@ export const Main: React.FC = () => (
       from={BONUS}
       to={CTA - 0.1}
       list={[
-        { flag: "🇨🇴", country: "Colombia", name: "Malama", at: 48.26 },
-        { flag: "🇬🇹", country: "Guatemala", name: "Madagascar Vanilla", at: 49.54 },
-        { flag: "🇨🇷", country: "Costa Rica", name: "Deep Blue cápsulas", at: 51.02 },
-        { flag: "🇲🇽", country: "México", name: "MetaPWR", img: "metapwr", at: 54.32 },
+        { flag: "🇨🇴", country: "Colombia", name: "Malama", img: "malama", at: 48.26 },
+        { flag: "🇬🇹", country: "Guatemala", name: "Madagascar Vanilla", img: "vainilla", at: 49.54 },
+        { flag: "🇨🇷", country: "Costa Rica", name: "Deep Blue cápsulas", img: "deepblue-capsulas", at: 51.02 },
+        { flag: "🇲🇽", country: "México", name: "MetaPWR cápsulas", img: "metapwr-capsulas", at: 54.32 },
       ]}
     />
     <SubsRank keywords={KEYWORDS} hide={[[0, 2.6], [CTA, 999]]} />

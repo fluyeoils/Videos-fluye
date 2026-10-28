@@ -332,7 +332,7 @@ export const BonusCountries: React.FC<{ from: number; to: number; list: Bonus[] 
             <div style={{ fontFamily: HAND, fontSize: 40, color: C.mid }}>{cur.country}</div>
             <div style={{ fontFamily: TITLE, fontWeight: 900, fontSize: cur.name.length > 16 ? 44 : 52, lineHeight: 1, color: C.plum }}>{cur.name}</div>
           </div>
-          {cur.img && <Img src={staticFile(`productos/${cur.img}.png`)} style={{ height: 150 }} />}
+          {cur.img && <Img src={staticFile(`productos/${cur.img}.png`)} style={{ height: 290, margin: "-110px 0 -40px", filter: "drop-shadow(0 8px 14px rgba(94,62,93,.45))" }} />}
         </div>
       )}
     </AbsoluteFill>

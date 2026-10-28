@@ -2,3 +2,5 @@
 .claude/skills/editor-video-ia/.venv/
 node_modules/
 edicion-*/
+node_modules
+out/

@@ -16,6 +16,9 @@ MULTI = [
 SINGLE = {
     "cloud": "Claude", "clod": "Claude", "gojalevel": "GoHighLevel", "gohighlevel": "GoHighLevel",
     "8n": "n8n", "ene8ene": "n8n", "vídeo": "video",
+    # Fluye Oils / dōTERRA
+    "doterra": "dōTERRA", "yerbabuenez": "Hierbabuena", "yerbabuena": "Hierbabuena", "metapower": "MetaPWR",
+    "rolón": "roll-on",
 }
 
 

@@ -16,7 +16,7 @@ fi
 "$SKILL/.venv/bin/python" -c "import faster_whisper, numpy, cv2" 2>/dev/null || {
   echo "→ Instalando transcripción (faster-whisper) y detección de cara (OpenCV)…"
   "$SKILL/.venv/bin/pip" install -q --upgrade pip
-  "$SKILL/.venv/bin/pip" install -q faster-whisper numpy opencv-python-headless
+  "$SKILL/.venv/bin/pip" install -q faster-whisper "av>=11,<16" numpy opencv-python-headless
 }
 if [ ! -d "$SKILL/engine/node_modules/remotion" ]; then
   echo "→ Instalando Remotion (motor de edición)…"

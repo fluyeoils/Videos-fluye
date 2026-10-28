@@ -4,3 +4,6 @@ node_modules/
 edicion-*/
 node_modules
 out/
+fuente/
+*.mov
+*.mp4

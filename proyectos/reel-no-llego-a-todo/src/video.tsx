@@ -7,6 +7,7 @@ import { Bubble, ConsultaCTA, Merge, Pills, Quote, Subs, TopTitle } from "./hist
 
 export const CTA_SECONDS = 2.2;
 const CTA = 58.8;
+const REVEAL = 7.6; // "Eso fue lo que me dijo…"
 
 const KEYWORDS = [
   "todo", "agotada", "masajista", "podología", "quemada", "elegir", "juntarlo", "pasiones", "aceites", "distinto",
@@ -31,9 +32,23 @@ const Cam: React.FC = () => {
   const z = dur === 0 ? z1 : interpolate(t, [at, at + dur], [prev, z1], {
     extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.bezier(0.22, 1, 0.36, 1),
   });
+  // apertura en tono cálido casi blanco y negro (como un recuerdo); vuelve al color en "Eso fue lo que me dijo"
+  const mem = 1 - interpolate(t, [REVEAL - 0.2, REVEAL + 0.15], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const flash = interpolate(t, [REVEAL - 0.05, REVEAL + 0.05, REVEAL + 0.3], [0, 0.55, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ overflow: "hidden" }}>
-      <OffthreadVideo src={staticFile("cam.mp4")} style={{ width: 1080, height: 1920, transform: `scale(${z})`, transformOrigin: "50% 32%" }} />
+      <OffthreadVideo
+        src={staticFile("cam.mp4")}
+        style={{
+          width: 1080,
+          height: 1920,
+          transform: `scale(${z})`,
+          transformOrigin: "50% 32%",
+          filter: mem > 0 ? `grayscale(${0.85 * mem}) sepia(${0.45 * mem}) contrast(${1 + 0.08 * mem}) brightness(${1 - 0.04 * mem})` : undefined,
+        }}
+      />
+      {mem > 0 && <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 38%, rgba(255,244,198,${0.1 * mem}) 0%, rgba(94,62,93,${0.45 * mem}) 100%)` }} />}
+      {flash > 0 && <AbsoluteFill style={{ background: C.cream, opacity: flash }} />}
     </AbsoluteFill>
   );
 };

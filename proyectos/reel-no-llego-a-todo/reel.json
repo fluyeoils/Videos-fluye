@@ -58,7 +58,7 @@
   ],
   [
    74.78,
-   77.5
+   78.6
   ]
  ],
  "parts": [
@@ -120,7 +120,7 @@
   ],
   [
    75.92,
-   77.68
+   78.68
   ]
  ],
  "cam": [
@@ -132,5 +132,5 @@
  "wide": null,
  "screen": null,
  "source": "fuente/consulta/video1080.mp4",
- "duration": 66.9
+ "duration": 67.795011
 }
